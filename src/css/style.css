@@ -1,0 +1,181 @@
+html,
+body {
+    // height: 100%;
+    // overflow-y: scroll;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.todo-paper {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.todo-paper>h2 {
+    font-size: 26px;
+    line-height: 100px;
+    font-weight: 100;
+    text-shadow: 1px 1px 0px #FFF;
+}
+
+
+
+/*输入TODO*/
+
+.todo-add-bar {
+    position: relative;
+}
+
+.todo-add-bar .todo-inp {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    padding: 0 15px;
+    padding-right: 40px;
+    border: 1px solid #CCC;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.todo-add-bar .btn-clear {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: 54px;
+    height: 54px;
+    width: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* 每条TODO信息列表 */
+.todo-list {
+    background: rgba(255, 255, 255, 0.46);
+    max-height: 480px;
+    overflow-y: scroll;
+}
+
+.todo-line {
+    position: relative;
+    padding: 15px 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 160%;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.6);
+}
+
+.todo-line .icon {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.todo-line .btn-del {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.finished-del {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, .5);
+}
+
+
+
+/*更换壁纸*/
+
+@-webkit-keyframes xuanzhuan {
+    0% {
+        webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(-90deg);
+    }
+    50% {
+        -webkit-transform: rotate(-180deg);
+    }
+    75% {
+        -webkit-transform: rotate(-270deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+@keyframes xuanzhuan {
+    0% {
+        webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(-90deg);
+    }
+    50% {
+        -webkit-transform: rotate(-180deg);
+    }
+    75% {
+        -webkit-transform: rotate(-270deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.fengche-wraper{
+	position: fixed;
+	width: 40px;
+	height: 60px;
+	z-index: 1;
+	bottom: 0;
+	right: 20px;
+	z-index: 10;
+}
+.fengche{
+	width: 40px;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.xuanzhuan{
+	-webkit-animation: xuanzhuan 1s linear infinite;
+}
+
+/* todo-settings */
+.todo-settings{
+    width: 260px;
+    height: 340px;
+}
