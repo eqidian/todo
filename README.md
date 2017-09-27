@@ -1,2 +1,2 @@
 # todo
-Chrome Extension
+Chrome Extension 兼容Chrome浏览器
